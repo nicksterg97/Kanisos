@@ -1,5 +1,5 @@
 /**
-* Template Name: Platia
+* Template Name: Kanisos
 * Template URL: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
 * Updated: Aug 11 2025 with Bootstrap v5.3.7
 * Author: BootstrapMade.com

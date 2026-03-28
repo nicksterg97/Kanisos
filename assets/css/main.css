@@ -1,5 +1,5 @@
 /**
-* Template Name: Platia
+* Template Name: Kanisos
 * Template URL: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
 * Updated: Aug 11 2025 with Bootstrap v5.3.7
 * Author: BootstrapMade.com
@@ -229,8 +229,8 @@ h6 {
 }
 
 .header .branding {
-  min-height: 60px;
-  padding: 10px 0;
+  min-height: 56px;
+  padding: 4px 0;
 }
 
 .header .logo {
@@ -238,8 +238,14 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  width: 230px;
+  max-height: none;
+  margin-right: 0;
+  height: auto;
+  display: block;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .header .logo h1 {
@@ -518,6 +524,16 @@ h6 {
   line-height: 1;
 }
 
+.footer .footer-content .logo img {
+  width: 260px;
+  max-height: none;
+  height: auto;
+  display: block;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
 .footer .footer-content .logo span {
   color: var(--heading-color);
   font-size: 28px;
@@ -668,7 +684,7 @@ h6 {
 }
 
 .footer .footer-contact .contact-item .contact-icon i {
-  color: var(--accent-color);
+  color: #fff;
   font-size: 16px;
 }
 
@@ -677,6 +693,15 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 14px;
   line-height: 1.5;
+}
+
+.footer .footer-contact .contact-item .contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .footer-contact .contact-item .contact-info a:hover {
+  color: color-mix(in srgb, #fff, var(--accent-color) 25%);
 }
 
 .footer .social-links {
@@ -689,7 +714,7 @@ h6 {
   width: 42px;
   height: 42px;
   background-color: color-mix(in srgb, var(--default-color), transparent 92%);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;

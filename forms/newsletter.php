@@ -1,39 +1,30 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+  http_response_code(405);
+  exit('Method Not Allowed');
+}
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+$receiving_email_address = 'info@kanisos.be';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+$email = trim($_POST['email'] ?? '');
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['email'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject ="New Subscription: " . $_POST['email'];
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  http_response_code(400);
+  exit('Please provide a valid email address.');
+}
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+$subject = 'New Subscription: ' . $email;
+$body = "Newsletter subscription request\n\nEmail: {$email}\n";
+$headers = [
+  'From: ' . $email,
+  'Reply-To: ' . $email,
+  'Content-Type: text/plain; charset=UTF-8'
+];
 
-  $contact->add_message( $_POST['email'], 'Email');
+if (mail($receiving_email_address, $subject, $body, implode("\r\n", $headers))) {
+  exit('OK');
+}
 
-  echo $contact->send();
+http_response_code(500);
+exit('Unable to process your subscription right now.');
 ?>
