@@ -1121,10 +1121,12 @@ section,
   z-index: 0;
 }
 
+.hero .hero-background img,
 .hero .hero-background video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .hero .hero-background .overlay {
