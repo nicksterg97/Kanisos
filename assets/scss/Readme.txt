@@ -1,2 +1,1 @@
-The .scss (Sass) files are only available in the pro version.
-You can buy it from: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
+This SCSS folder belongs to the Kanisos site styling.

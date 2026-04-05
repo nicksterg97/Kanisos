@@ -1,6 +1,6 @@
 /**
 * Template Name: Kanisos
-* Template URL: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
+* Template Source: BootstrapMade restaurant template, customized for Kanisos.
 * Updated: Aug 11 2025 with Bootstrap v5.3.7
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -248,6 +248,16 @@ h6 {
   border-radius: 6px;
 }
 
+.header .logo img.home-logo-small {
+  width: 120px;
+}
+
+.legal-navbar-logo {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover;
+}
+
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -318,10 +328,18 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover>a {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #d4b06a;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
   }
 
   .navmenu .dropdown ul {
@@ -447,10 +465,18 @@ h6 {
     color: var(--contrast-color);
   }
 
-  .navmenu a:hover,
+  .navmenu a:hover {
+    color: var(--nav-dropdown-hover-color);
+  }
+
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #d4b06a;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
   }
 
   .navmenu .active i,
