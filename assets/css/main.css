@@ -252,6 +252,20 @@ h6 {
   width: 120px;
 }
 
+@media (max-width: 768px) {
+  .header .logo img.home-logo-small {
+    width: 96px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .logo img.home-logo-small {
+    width: 84px;
+    padding: 3px 6px;
+  }
+}
+
 .legal-navbar-logo {
   width: 40px !important;
   height: 40px !important;
